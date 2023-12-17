@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class = "userBody">
+	<form action="/user" method="post">
+		<h2>Add your favorite Pokemon</h2>
+	
+		<label><strong>Username:</strong><input id = "username" type="text" placeholder="Username" name="username"/></label> 		
+		<label><strong>Favorite Pokemon:</strong><input id = "favoritePokemon" type="text" placeholder="Favorite Pokemon" name="favoritePokemon"/></label>
+		<input id = "submit_user" type="submit" value="Submit" name="submit_user"/>
+	</form>
+	<br>
+	<h1>Users' Favorite Pokemon</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Username</th>
+				<th>Favorite Pokemon</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>paul</td>
+				<td>Mewtwo</td>
+			<tr>
+			</tr>
+				<td>paul2</td>
+				<td>Rayquaza</td>
+			</tr>
+			<tr>
+				<td>paul3</td>
+				<td>Volcarona</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+<script>
+	window.onsubmit = main;
+	function main(){     
+		let value = "Are you sure you want to submit your application?";
+		if (confirm(value) == true){
+			return true;
+		}else{
+			return false;
+		}
+	}
+</script>
+</html>
